@@ -6,6 +6,7 @@ const breedDetailsFromFile = function(breed, functionToRunWhenThingsAreDone) {
     // CHANGE: Pass data into callback instead of returning it directly
     console.log("In readFile's Callback: it has the data.");
     if (!error) functionToRunWhenThingsAreDone(data);
+    if (error) functionToRunWhenThingsAreDone(undefined);
   });
 };
 
